@@ -29,4 +29,29 @@ http://localhost:3000/users/40
 http://localhost:3000/companies
 http://localhost:3000/companies/1/users
 
+http://localhost:4000/graphql?query
+
+{
+  user(id: "40") {
+    id,
+    firstName,
+    age
+  }
+}
+
+{
+  user(id: "40") {
+    id
+    firstName
+    age
+    company {
+      id
+      name
+      description
+    }
+  }
+}
+
+run the query and trace to the server console.
+
 
